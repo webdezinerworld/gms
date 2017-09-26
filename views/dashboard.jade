@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	user logged In!!
+	form#formAddUser(style="margin-top:10px;" name="adduser",method="post",action="/logoutuser")
+		button#btnSubmit(type="submit") Logout
+		p= error

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	each user, i in userupdate
+		form#formAddUser(name="adduser",method="post",action="/updateprofile/#{user._id}" class="formContainers")
+			h1= title
+			div(class="form-group")
+				label(for="username") User name
+				input#inputUserName(type="text", placeholder="username", name="username",value="#{user.username}" class="form-control")
+			div(class="form-group")
+				label(for="useremail") Email
+				input#inputUserEmail(type="text", placeholder="useremail", name="useremail",value="#{user.email}" class="form-control")
+			div(class="form-group")
+				label(for="password") Password
+				input#inputUserEmail(type="password", placeholder="password", name="password",value="#{user.password}" class="form-control")
+			div(class="form-group")
+				label(for="confirmPassword") Confirm Password
+				input#inputUserEmail(type="password", placeholder="Confirm Password", name="confirmPassword" ,value="#{user.confirmPassword}" class="form-control")
+			div(class="form-group")
+				label(for="phone") Phone no.
+				input#inputUserEmail(type="number", placeholder="Phone no.", name="phone" , value="#{user.phone}" class="form-control")
+			button#btnSubmit(type="submit" class="btn btn-default") Update
+			span#error

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    form#formAddUser(name="adduser",method="post",action="/updateuser" class="formContainers")
+    	h1= title
+		div(class="form-group")
+			label(for="username") User name
+        	input#inputUserName(type="text", placeholder="User Name", name="username" class="form-control")
+        div(class="form-group")
+			label(for="username") Email
+        	input#inputUserEmail(type="text", placeholder="Email", name="useremail" class="form-control")
+        div(class="form-group")
+			label(for="username") Password
+        	input#inputUserEmail(type="password", placeholder="password", name="password" class="form-control")
+        div(class="form-group")
+			label(for="username") Confirm Password
+        	input#inputUserEmail(type="password", placeholder="Confirm Password", name="confirmPassword" class="form-control")
+        div(class="form-group")
+			label(for="username") Phone no.
+        	input#inputUserEmail(type="number", placeholder="Phone no.", name="phone" class="form-control")
+        button#btnSubmit(type="submit") submit
+        span#error
